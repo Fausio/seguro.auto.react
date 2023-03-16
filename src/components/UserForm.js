@@ -20,7 +20,9 @@ export class UserForm extends Component {
 
     // proced to nex step  =>
     nextStep = () => {
-        const { step } = this.setState;
+        const { step } = this.state;
+        console.log("nextStep");
+
         this.setState({
             step: step + 1
         });
@@ -28,7 +30,7 @@ export class UserForm extends Component {
 
     // Go back to prev step  <=
     prevStep = () => {
-        const { step } = this.setState;
+        const { step } = this.state;
         this.setState({
             step: step - 1
         });
@@ -52,7 +54,7 @@ export class UserForm extends Component {
         switch (step) {
 
             case 1:
-
+                console.log("1");
                 return (
                     <UserDetails
 
@@ -64,14 +66,17 @@ export class UserForm extends Component {
                     </UserDetails>
                 )
             case 2:
+                console.log("2");
                 return (
                     <h1 > Form User Details  </h1>
                 )
             case 3:
+                console.log("3");
                 return (
                     <h1 > Confirm </h1>
                 )
             case 4:
+                console.log("4");
                 return (
                     <h1 > Sucess </h1>
                 )

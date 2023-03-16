@@ -7,8 +7,10 @@ import AppBar from 'material-ui/AppBar'
 export default class UserDetails extends Component {
 
     Continue = e => {
+
+        console.log("Continue");
         e.preventDefault();
-        this.props.nextStep();
+        this.props.nextStep(); 
     }
 
 
@@ -60,14 +62,13 @@ export default class UserDetails extends Component {
 
 
                     <RaisedButton
+                        variant="contained"
                         label="Continuar"
                         primary={true}
                         style={styles.button}
                         onClick={this.Continue} />
 
-
-
-https://www.youtube.com/watch?v=zT62eVxShsY
+                    {/* https://www.youtube.com/watch?v=zT62eVxShsY */}
 
                 </React.Fragment>
             </MuiThemeProvider>
