@@ -7,11 +7,18 @@ import AppBar from 'material-ui/AppBar'
 export default class Result extends Component {
 
     Continue = e => {
-
-        console.log("Continue");
+ 
         e.preventDefault();
         this.props.nextStep();
     }
+
+    back = e => {
+
+      
+        e.preventDefault();
+        this.props.prevStep();
+    }
+
 
 
 
@@ -64,13 +71,18 @@ export default class Result extends Component {
 
                     <RaisedButton
                         variant="contained"
+                        label="Voltar"
+                        primary={true}
+                        backgroundColor="#FF0000"
+                        style={styles.button}
+                        onClick={this.back} />
+
+                    <RaisedButton
+                        variant="contained"
                         label="Continuar"
                         primary={true}
                         style={styles.button}
                         onClick={this.Continue} />
-
-                    {/* https://www.youtube.com/watch?v=zT62eVxShsY */}
-
                 </React.Fragment>
             </MuiThemeProvider>
         )
