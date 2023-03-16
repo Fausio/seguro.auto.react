@@ -4,13 +4,13 @@ import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
 import AppBar from 'material-ui/AppBar'
 
-export default class UserDetails extends Component {
+export default class Result extends Component {
 
     Continue = e => {
 
         console.log("Continue");
         e.preventDefault();
-        this.props.nextStep(); 
+        this.props.nextStep();
     }
 
 
@@ -27,9 +27,10 @@ export default class UserDetails extends Component {
 
         return (
             <MuiThemeProvider>
+
                 <React.Fragment>
                     <AppBar title="SEGURO AUTO " />
-                    <h1> 🟢  -  ⚫  -  ⚫</h1>
+                    <h1> 🟢  -  🟢  -  ⚫</h1>
                     <TextField hintText="Adicione o seu nome"
                         floatingLabelText="Nome"
                         onChange={handleChange('name')}

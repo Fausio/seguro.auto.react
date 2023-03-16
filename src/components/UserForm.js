@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import UserDetails from './UserDetails'
+import Result from './Result'
 
 
 export class UserForm extends Component {
@@ -46,7 +47,7 @@ export class UserForm extends Component {
 
         const { step } = this.state;
         const { name, email, phone, insurerType, carPrice } = this.state;
-        const values = { name, email, phone, insurerType, carPrice }
+        const values = { name, email, phone, insurerType, carPrice };
 
 
 
@@ -54,21 +55,25 @@ export class UserForm extends Component {
         switch (step) {
 
             case 1:
-                console.log("1");
+                console.log("1", values);
                 return (
                     <UserDetails
 
                         nextStep={this.nextStep}
                         handleChange={this.handleChange}
                         values={values}
-                    >
+                    />
 
-                    </UserDetails>
                 )
             case 2:
                 console.log("2");
                 return (
-                    <h1 > Form User Details  </h1>
+                    <Result
+
+                        nextStep={this.nextStep}
+                        handleChange={this.handleChange}
+                        values={values}
+                    />
                 )
             case 3:
                 console.log("3");
