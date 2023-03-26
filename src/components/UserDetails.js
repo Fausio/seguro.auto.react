@@ -29,7 +29,8 @@ export default class UserDetails extends Component {
             <MuiThemeProvider>
                 <React.Fragment>
                     <AppBar title="SEGURO AUTO " />
-                    <h1> 🟢  -  ⚫  -  ⚫</h1>
+                    <p> 🟢  -  ⚫  -  ⚫</p>
+                    <p> Formulário  </p>
                     <TextField hintText="Adicione o seu nome"
                         floatingLabelText="Nome"
                         onChange={handleChange('name')}
@@ -39,25 +40,25 @@ export default class UserDetails extends Component {
                     <TextField hintText="Adicione o seu email"
                         floatingLabelText="Email"
                         onChange={handleChange('email')}
-                        defaultValue={values.name} />
+                        defaultValue={values.email} />
                     <br />
 
                     <TextField hintText="Adicione o seu numero de celular"
                         floatingLabelText="Celular"
                         onChange={handleChange('phone')}
-                        defaultValue={values.name} />
+                        defaultValue={values.phone} />
                     <br />
 
                     <TextField hintText="Adicione o tipo de seguro"
                         floatingLabelText="Tipo de Seguro"
                         onChange={handleChange('insurerType')}
-                        defaultValue={values.name} />
+                        defaultValue={values.insurerType} />
                     <br />
 
                     <TextField hintText="Valor de compra da viatura"
                         floatingLabelText="Valor da viatura"
                         onChange={handleChange('carPrice')}
-                        defaultValue={values.name} />
+                        defaultValue={values.carPrice} />
                     <br />
 
 

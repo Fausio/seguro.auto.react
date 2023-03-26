@@ -13,8 +13,7 @@ export default class Result extends Component {
     }
 
     back = e => {
-
-
+ 
         e.preventDefault();
         this.props.prevStep();
     }
@@ -24,12 +23,31 @@ export default class Result extends Component {
 
     render() {
 
+     
         const { values, handleChange } = this.props;
-
+        console.log("sdsddsds",this.props)
         const styles = {
             button: {
                 margin: 15
+            },
+            textLeft: {
+                "text-align": "left",
+                "border-top-style": "none",
+                "border-bottom-style": "none",
+                "border-left-style": "none"
+            },
+            textRight: {
+                "text-align": "right",
+                "font-weight": "bold",
+                "border-top-style": "none",
+                "border-bottom-style": "none",
+                "border-left-style": "none"
+            },
+            size:{
+
+                "size": "10px"
             }
+
 
         }
 
@@ -41,17 +59,40 @@ export default class Result extends Component {
 
                 <React.Fragment>
                     <AppBar title="SEGURO AUTO " />
-                    <h1> 🟢  -  🟢  -  ⚫</h1>
+                    <p> 🟢  -  🟢  -  ⚫</p>
 
-                    <table border={1}>
+                    <p> Resultado </p>
+                    <table >
                         <tr>
-                            <td>Emil</td>
-                            <td>Tobias</td>
-                            <td>Linus</td>
+                            <td style={styles.textRight}>Nome: </td>
+                            <td style={styles.textLeft}> {this.props?.values?.name}</td> 
+                        </tr>
+
+                        <tr>
+                            <td style={styles.textRight}>Email:</td>
+                            <td style={styles.textLeft}>{this.props?.values?.email}</td> 
+                        </tr>
+
+                        <tr>
+                            <td style={styles.textRight}>Celular:</td>
+                            <td style={styles.textLeft}>{this.props?.values?.phone}</td> 
+                        </tr>
+
+                        <tr>
+                            <td style={styles.textRight}>Tipo de Seguro:</td>
+                            <td style={styles.textLeft}>{this.props?.values?.insurerType}</td> 
+                        </tr>
+                        <tr>
+                            <td style={styles.textRight}>Valor da Viatura:</td>
+                            <td style={styles.textLeft}>{this.props?.values?.carPrice}</td> 
+                        </tr>
+                        <tr>
+                            <td style={styles.textRight}>Valor a Pagar:</td>
+                            <td style={styles.textLeft}>{this.props?.values?.carPrice}</td> 
                         </tr>
                     </table>
 
-
+<br/>
                     <RaisedButton
                         variant="contained"
                         label="Voltar"

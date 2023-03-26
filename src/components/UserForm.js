@@ -47,8 +47,8 @@ export class UserForm extends Component {
     render() {
 
         const { step } = this.state;
-        const { name, email, phone, insurerType, carPrice } = this.state;
-        const values = { name, email, phone, insurerType, carPrice };
+        const { name, email, phone, insurerType, carPrice , payment} = this.state;
+        const values = { name, email, phone, insurerType, carPrice , payment};
 
 
 
@@ -67,10 +67,11 @@ export class UserForm extends Component {
 
                 )
             case 2:
-                console.log("2");
-                return (
-                    <Result
+                console.log("2",values);
 
+                // calc hive 
+                return (
+                    <Result 
                         nextStep={this.nextStep}
                         prevStep={this.prevStep}
                         handleChange={this.handleChange}

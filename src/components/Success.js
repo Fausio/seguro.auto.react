@@ -41,8 +41,9 @@ export default class Sucess extends Component {
 
                 <React.Fragment>
                     <AppBar title="SEGURO AUTO " />
-                    <h1> 🟢  -  🟢  -  🟢</h1>
- 
+                    <p> 🟢  -  🟢  -  🟢</p>
+                    <p> Sucesso ! </p>
+                    <br/>
                     <RaisedButton
                         variant="contained"
                         label="Voltar"
