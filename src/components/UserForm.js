@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import UserDetails from './UserDetails'
 import Result from './Result'
+import Sucess from './Success'
 
 
 export class UserForm extends Component {
@@ -79,13 +80,14 @@ export class UserForm extends Component {
             case 3:
                 console.log("3");
                 return (
-                    <h1 > Confirm </h1>
-                )
-            case 4:
-                console.log("4");
-                return (
-                    <h1 > Sucess </h1>
-                )
+                    <Sucess
+
+                    nextStep={this.nextStep}
+                    prevStep={this.prevStep}
+                    handleChange={this.handleChange}
+                    values={values}
+                />
+                ) 
             default:
                 break;
         }

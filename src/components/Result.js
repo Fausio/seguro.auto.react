@@ -7,14 +7,14 @@ import AppBar from 'material-ui/AppBar'
 export default class Result extends Component {
 
     Continue = e => {
- 
+
         e.preventDefault();
         this.props.nextStep();
     }
 
     back = e => {
 
-      
+
         e.preventDefault();
         this.props.prevStep();
     }
@@ -30,7 +30,11 @@ export default class Result extends Component {
             button: {
                 margin: 15
             }
+
         }
+
+
+
 
         return (
             <MuiThemeProvider>
@@ -38,35 +42,14 @@ export default class Result extends Component {
                 <React.Fragment>
                     <AppBar title="SEGURO AUTO " />
                     <h1> 🟢  -  🟢  -  ⚫</h1>
-                    <TextField hintText="Adicione o seu nome"
-                        floatingLabelText="Nome"
-                        onChange={handleChange('name')}
-                        defaultValue={values.name} />
-                    <br />
 
-                    <TextField hintText="Adicione o seu email"
-                        floatingLabelText="Email"
-                        onChange={handleChange('email')}
-                        defaultValue={values.name} />
-                    <br />
-
-                    <TextField hintText="Adicione o seu numero de celular"
-                        floatingLabelText="Celular"
-                        onChange={handleChange('phone')}
-                        defaultValue={values.name} />
-                    <br />
-
-                    <TextField hintText="Adicione o tipo de seguro"
-                        floatingLabelText="Tipo de Seguro"
-                        onChange={handleChange('insurerType')}
-                        defaultValue={values.name} />
-                    <br />
-
-                    <TextField hintText="Valor de compra da viatura"
-                        floatingLabelText="Valor da viatura"
-                        onChange={handleChange('carPrice')}
-                        defaultValue={values.name} />
-                    <br />
+                    <table border={1}>
+                        <tr>
+                            <td>Emil</td>
+                            <td>Tobias</td>
+                            <td>Linus</td>
+                        </tr>
+                    </table>
 
 
                     <RaisedButton
