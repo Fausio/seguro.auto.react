@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import UserDetails from './UserDetails'
 import Result from './Result'
-
+import Result from './Result'
 import AppBar from 'material-ui/AppBar'
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import SelectField from 'material-ui/SelectField';
@@ -52,8 +52,8 @@ export class UserForm extends Component {
     render() {
 
         const { step } = this.state;
-        const { name, email, phone, insurerType, carPrice } = this.state;
-        const values = { name, email, phone, insurerType, carPrice };
+        const { name, email, phone, insurerType, carPrice , payment} = this.state;
+        const values = { name, email, phone, insurerType, carPrice , payment};
 
 
 
@@ -72,9 +72,10 @@ export class UserForm extends Component {
 
                 )
             case 2:
-                console.log("2");
-                return (
+                console.log("2",values);
 
+                // calc hive 
+                return (
                     <Result
 
                         nextStep={this.nextStep}
@@ -86,15 +87,7 @@ export class UserForm extends Component {
             case 3:
                 console.log("3");
                 return (
-                    <MuiThemeProvider>
-
-                        <React.Fragment>
-                            <AppBar title="SEGURO AUTO " />
-                            <h1> 🟢  -  🟢  -  🟢</h1>
-
-
-                        </React.Fragment>
-                    </MuiThemeProvider>
+                    <h1 > Confirm </h1>
                 )
             case 4:
                 console.log("4");
