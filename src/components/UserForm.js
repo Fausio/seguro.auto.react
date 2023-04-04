@@ -2,6 +2,12 @@ import React, { Component } from 'react'
 import UserDetails from './UserDetails'
 import Result from './Result'
 
+import AppBar from 'material-ui/AppBar'
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import SelectField from 'material-ui/SelectField';
+import MenuItem from 'material-ui/MenuItem';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 
 export class UserForm extends Component {
 
@@ -68,6 +74,7 @@ export class UserForm extends Component {
             case 2:
                 console.log("2");
                 return (
+
                     <Result
 
                         nextStep={this.nextStep}
@@ -79,7 +86,15 @@ export class UserForm extends Component {
             case 3:
                 console.log("3");
                 return (
-                    <h1 > Confirm </h1>
+                    <MuiThemeProvider>
+
+                        <React.Fragment>
+                            <AppBar title="SEGURO AUTO " />
+                            <h1> 🟢  -  🟢  -  🟢</h1>
+
+
+                        </React.Fragment>
+                    </MuiThemeProvider>
                 )
             case 4:
                 console.log("4");

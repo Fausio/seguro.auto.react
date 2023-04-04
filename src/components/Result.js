@@ -3,6 +3,9 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
 import AppBar from 'material-ui/AppBar'
+import SelectField from 'material-ui/SelectField'
+
+
 
 export default class Result extends Component {
 
@@ -36,7 +39,7 @@ export default class Result extends Component {
             <MuiThemeProvider>
 
                 <React.Fragment>
-                    <AppBar title="SEGURO AUTO " />
+                    <AppBar title="" />
                     <h1> 🟢  -  🟢  -  ⚫</h1>
                     <TextField hintText="Adicione o seu nome"
                         floatingLabelText="Nome"

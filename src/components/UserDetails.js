@@ -28,7 +28,7 @@ export default class UserDetails extends Component {
         return (
             <MuiThemeProvider>
                 <React.Fragment>
-                    <AppBar title="SEGURO AUTO " />
+                <AppBar title="" />
                     <h1> 🟢  -  ⚫  -  ⚫</h1>
                     <TextField hintText="Adicione o seu nome"
                         floatingLabelText="Nome"
