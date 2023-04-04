@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import UserDetails from './UserDetails'
-import Result from './Result'
-import Result from './Result'
+import Result from './Result' 
 import AppBar from 'material-ui/AppBar'
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import SelectField from 'material-ui/SelectField';

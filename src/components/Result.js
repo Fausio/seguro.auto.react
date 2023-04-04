@@ -65,12 +65,7 @@ export default class Result extends Component {
                     
                     <AppBar title="SEGURO AUTO " />
 
-
-
-
-
-
-
+ 
                     <h1> 🟢  -  🟢  -  ⚫</h1>
                     <TextField hintText="Adicione o seu nome"
                         floatingLabelText="Nome"
