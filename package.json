@@ -1,6 +1,7 @@
 {
-  "homepage": "http://seguroauto.co.mz", 
+  
   "name": "seguro.auto.react",
+  "homepage": "http://seguroauto.co.mz", 
   "version": "0.1.0",
   "private": true,
   "dependencies": {
