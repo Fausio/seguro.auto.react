@@ -4,8 +4,8 @@ import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
 import AppBar from 'material-ui/AppBar'
 import SelectField from 'material-ui/SelectField'
-
-
+import Toolbar from 'material-ui/Toolbar'
+import logoSquared from '../Files/img/squared-logo.png'
 
 export default class Result extends Component {
 

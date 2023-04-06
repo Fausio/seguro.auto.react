@@ -5,8 +5,9 @@ import MenuItem from 'material-ui/MenuItem/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton'
 import AppBar from 'material-ui/AppBar'
 import SelectField from 'material-ui/SelectField'
-
+import Toolbar from 'material-ui/Toolbar'
 import { useState, useEffect } from 'react';
+import logo from '../Files/img/logo1.png'
 
 export default class UserDetails extends Component {
 
@@ -34,29 +35,29 @@ export default class UserDetails extends Component {
     Continue = e => {
 
 
-         var msg = "";
- 
-         var somNull = false;
- 
-         if (this.props.values.name === "") { somNull = true; msg = " " + msg + "Nome, " }
-         if (this.props.values.email === "") { somNull = true; msg = " " + msg + "EMail, " }
-         if (this.props.values.phone === "") { somNull = true; msg = " " + msg + "Celular, " }
-         if (this.props.values.insurerType === "") { somNull = true; msg = " " + msg + "Tipo de seguro, " }
- 
- 
-         if (somNull) {
- 
-             alert(" Os seguintes campos são obrigatórios:\ " + msg)
- 
-             somNull = false;
-             return false;
-         }
- 
-         if (this.props.values.insurerType === "Danos próprios" && this.props.values.carPrice === 0) {
-             alert(" Adicione um valor da viatura valido")
-             somNull = false;
-             return false;
-         }
+        var msg = "";
+
+        var somNull = false;
+
+        if (this.props.values.name === "") { somNull = true; msg = " " + msg + "Nome, " }
+        if (this.props.values.email === "") { somNull = true; msg = " " + msg + "EMail, " }
+        if (this.props.values.phone === "") { somNull = true; msg = " " + msg + "Celular, " }
+        if (this.props.values.insurerType === "") { somNull = true; msg = " " + msg + "Tipo de seguro, " }
+
+
+        if (somNull) {
+
+            alert(" Os seguintes campos são obrigatórios:\ " + msg)
+
+            somNull = false;
+            return false;
+        }
+
+        if (this.props.values.insurerType === "Danos próprios" && this.props.values.carPrice === 0) {
+            alert(" Adicione um valor da viatura valido")
+            somNull = false;
+            return false;
+        }
 
 
 
@@ -82,7 +83,7 @@ export default class UserDetails extends Component {
         }
 
 
- 
+
         const saveToState = (value, name) => {
 
 
@@ -105,10 +106,9 @@ export default class UserDetails extends Component {
             <MuiThemeProvider>
                 <React.Fragment>
 
-                <AppBar title="SEGURO AUTO " />
-
-
-
+                    <AppBar title="SEGURO AUTO " />
+                       
+ 
 
 
                     <p> 🟢  -  ⚫  -  ⚫</p>

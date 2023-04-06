@@ -3,6 +3,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
 import AppBar from 'material-ui/AppBar'
+import logoSquared from '../Files/img/squared-logo.png'
+import Toolbar from 'material-ui/Toolbar'
 
 export default class Sucess extends Component {
 
@@ -38,8 +40,11 @@ export default class Sucess extends Component {
 
                 <React.Fragment>
                     <AppBar title="SEGURO AUTO " />
+                  
                     <p> 🟢  -  🟢  -  🟢</p>
                     <p> Sucesso ! </p>
+
+                    <img src={logoSquared} style={{ width: '170px', }} />
 
                     <p style={{ marginLeft: '20%', marginRight: '20%' }}> Olá! Parabéns por ter feito a simulação de compra de seguro na aplicação Seguro Auto. É muito importante garantir a segurança do seu veículo e ter a proteção necessária em caso de acidentes ou imprevistos. A simulação de compra permite que você avalie diferentes opções de cobertura e preços, para escolher a melhor opção para suas necessidades. </p>
 
