@@ -9,6 +9,15 @@ import SelectField from 'material-ui/SelectField'
 
 export default class Result extends Component {
 
+    constructor() {
+        super()
+
+        this.myRef = React.createRef();
+
+
+
+    }
+
     Continue = e => {
 
         e.preventDefault();
@@ -16,19 +25,19 @@ export default class Result extends Component {
     }
 
     back = e => {
- 
+
         e.preventDefault();
         this.props.prevStep();
     }
 
 
 
-
     render() {
 
-     
+
+
         const { values, handleChange } = this.props;
-        console.log("sdsddsds",this.props)
+
         const styles = {
             button: {
                 margin: 15
@@ -46,9 +55,13 @@ export default class Result extends Component {
                 "border-bottom-style": "none",
                 "border-left-style": "none"
             },
-            size:{
+            size: {
 
                 "size": "10px"
+            },
+            hideCarValue: {
+
+                display: "none"
             }
 
 
@@ -56,55 +69,87 @@ export default class Result extends Component {
 
 
 
+        {
+
+
+            console.log("v", this.myRef?.style?.display)
+            /*    if (this.props?.values?.insurerType === "Contra terceiros") {
+                   this.myRef.current.style.display = "none"
+               } else {
+                   this.myRef.current.style.display = "inline"
+               } */
+        }
+
+
+        const calcInsurer = () => {
+
+
+
+        }
+
+
+        let PriceTd;
+
+        if (this.props?.values?.insurerType === "Contra terceiros") {
+
+            PriceTd = <tr style={styles.hideCarValue}>
+                <td style={styles.textRight}>Valor da Viatura:</td>
+                <td style={styles.textLeft}>{this.props?.values?.carPrice}</td>
+            </tr>
+        }
 
         return (
+
+
+
+
+
+
             <MuiThemeProvider>
 
                 <React.Fragment>
 
-                    
-                    <AppBar title="SEGURO AUTO " />
 
- 
+                    <AppBar title=". " />
+
+
                     <h1> 🟢  -  🟢  -  ⚫</h1>
-                    <TextField hintText="Adicione o seu nome"
-                        floatingLabelText="Nome"
-                        onChange={handleChange('name')}
-                        defaultValue={values.name} />
+
                     <br />
 
                     <p> Resultado </p>
                     <table >
                         <tr>
                             <td style={styles.textRight}>Nome: </td>
-                            <td style={styles.textLeft}> {this.props?.values?.name}</td> 
+                            <td style={styles.textLeft}> {this.props?.values?.name}</td>
                         </tr>
 
                         <tr>
                             <td style={styles.textRight}>Email:</td>
-                            <td style={styles.textLeft}>{this.props?.values?.email}</td> 
+                            <td style={styles.textLeft}>{this.props?.values?.email}</td>
                         </tr>
 
                         <tr>
                             <td style={styles.textRight}>Celular:</td>
-                            <td style={styles.textLeft}>{this.props?.values?.phone}</td> 
+                            <td style={styles.textLeft}>{this.props?.values?.phone}</td>
                         </tr>
 
                         <tr>
                             <td style={styles.textRight}>Tipo de Seguro:</td>
-                            <td style={styles.textLeft}>{this.props?.values?.insurerType}</td> 
+                            <td style={styles.textLeft}>{this.props?.values?.insurerType}</td>
                         </tr>
-                        <tr>
-                            <td style={styles.textRight}>Valor da Viatura:</td>
-                            <td style={styles.textLeft}>{this.props?.values?.carPrice}</td> 
-                        </tr>
+
+
+                        {PriceTd}
+
+
                         <tr>
                             <td style={styles.textRight}>Valor a Pagar:</td>
-                            <td style={styles.textLeft}>{this.props?.values?.carPrice}</td> 
+                            <td style={styles.textLeft}>{this.props?.values?.carPrice}</td>
                         </tr>
                     </table>
 
-<br/>
+                    <br />
                     <RaisedButton
                         variant="contained"
                         label="Voltar"

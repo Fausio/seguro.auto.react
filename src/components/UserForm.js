@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import UserDetails from './UserDetails'
-import Result from './Result' 
+import Result from './Result'
 import AppBar from 'material-ui/AppBar'
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import SelectField from 'material-ui/SelectField';
@@ -9,6 +9,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 
 export class UserForm extends Component {
+
+
 
     state = {
         step: 1,
@@ -43,17 +45,25 @@ export class UserForm extends Component {
     }
 
     // handle fields change
-    handleChange = input => e => {
+    handleChange = input => e => { 
+
         this.setState({ [input]: e.target.value });
     }
+
+
 
 
     render() {
 
         const { step } = this.state;
-        const { name, email, phone, insurerType, carPrice , payment} = this.state;
-        const values = { name, email, phone, insurerType, carPrice , payment};
+        const { name, email, phone, insurerType, carPrice, payment } = this.state;
+        const values = { name, email, phone, insurerType, carPrice, payment };
 
+
+         const addInsurerType = (e) => {
+ 
+            this.setState({ "insurerType": e });
+        }  
 
 
 
@@ -67,14 +77,18 @@ export class UserForm extends Component {
                         nextStep={this.nextStep}
                         handleChange={this.handleChange}
                         values={values}
+                        addInsurerType={addInsurerType}
                     />
 
                 )
             case 2:
-                console.log("2",values);
+                console.log("2", values);
+                console.log("insurerType", insurerType);
 
                 // calc hive 
                 return (
+
+
                     <Result
 
                         nextStep={this.nextStep}
