@@ -5,7 +5,7 @@ import MenuItem from 'material-ui/MenuItem/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton'
 import AppBar from 'material-ui/AppBar'
 import SelectField from 'material-ui/SelectField'
-import Paper from 'material-ui/Paper'
+
 import { useState, useEffect } from 'react';
 
 export default class UserDetails extends Component {
@@ -33,14 +33,40 @@ export default class UserDetails extends Component {
 
     Continue = e => {
 
-        console.log("Continue");
+
+        var msg = "";
+
+        var somNull = false;
+
+        if (this.props.values.name === "") { somNull = true; msg = " " + msg + "Nome, " }
+        if (this.props.values.email === "") { somNull = true; msg = " " + msg + "EMail, " }
+        if (this.props.values.phone === "") { somNull = true; msg = " " + msg + "Celular, " }
+        if (this.props.values.insurerType === "") { somNull = true; msg = " " + msg + "Tipo de seguro, " }
+
+
+        if (somNull) {
+
+            alert(" Os seguintes campos são obrigatórios:\ " + msg)
+
+            somNull = false;
+            return false;
+        }
+
+        if (this.props.values.insurerType === "Danos próprios" && this.props.values.carPrice === 0) {
+            alert(" Adicione um valor da viatura valido")
+            somNull = false;
+            return false;
+        }
+
+
+
         e.preventDefault();
         this.props.nextStep();
     }
 
 
     render() {
- 
+
         const { values, handleChange, addInsurerType } = this.props;
 
         const styles = {
@@ -73,7 +99,7 @@ export default class UserDetails extends Component {
 
             this.setState({ [name]: values.insurerType })
 
-             addInsurerType(values.insurerType);
+            addInsurerType(values.insurerType);
         }
 
         return (
@@ -92,13 +118,15 @@ export default class UserDetails extends Component {
 
 
 
-                    <TextField hintText="Adicione o seu nome"
+
+
+                    <TextField required hintText="Adicione o seu nome"
                         floatingLabelText="Nome"
                         onChange={handleChange('name')}
                         defaultValue={values.name} />
                     <br />
 
-                    <TextField hintText="Adicione o seu email"
+                    <TextField required hintText="Adicione o seu email"
                         floatingLabelText="Email"
                         onChange={handleChange('email')}
                         defaultValue={values.email} />
@@ -112,7 +140,7 @@ export default class UserDetails extends Component {
 
                     <SelectField
 
-                        floatingLabelText="Frequency"
+                        floatingLabelText="Tipo de seguro"
                         value={this.state.multiple_selections}
                         onChange={(e, newVar) => saveToState(newVar, 'multiple_selections')}
 
