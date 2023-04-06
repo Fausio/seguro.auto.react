@@ -68,8 +68,31 @@ export default class Result extends Component {
         }
 
 
+        function formatDollar(num) {
+
+            console.log("dddddd", num)
+
+            var p = num.toFixed(2).split(".");
+            return p[0].split("").reverse().reduce(function (acc, num, i, orig) {
+                return num + (num != "-" && i && !(i % 3) ? "." : "") + acc;
+            }, "") + "," + p[1];
+        }
 
         {
+
+            // calc payment
+
+            if (this.props?.values?.insurerType === "Contra terceiros") {
+                var calc = formatDollar(6000);
+                this.props.values.payment = calc + " Mzn";
+            } else {
+
+
+
+                var calc = formatDollar((6 * Number(this.props?.values?.carPrice)) / 100);  // " Mzn, 6% do valor da viatura"
+                this.props.values.payment = calc + " Mzn, 6% do valor da viatura"
+            }
+
 
 
             console.log("v", this.myRef?.style?.display)
@@ -81,22 +104,26 @@ export default class Result extends Component {
         }
 
 
-        const calcInsurer = () => {
 
 
 
-        }
+
 
 
         let PriceTd;
 
-        if (this.props?.values?.insurerType === "Contra terceiros") {
+        if (this.props?.values?.insurerType === "Danos próprios") {
 
-            PriceTd = <tr style={styles.hideCarValue}>
+            PriceTd = <tr>
                 <td style={styles.textRight}>Valor da Viatura:</td>
-                <td style={styles.textLeft}>{this.props?.values?.carPrice}</td>
+                <td style={styles.textLeft}>{formatDollar(Number(this.props?.values?.carPrice)) + " Mzn"}</td>
             </tr>
         }
+
+
+
+
+
 
         return (
 
@@ -145,7 +172,7 @@ export default class Result extends Component {
 
                         <tr>
                             <td style={styles.textRight}>Valor a Pagar:</td>
-                            <td style={styles.textLeft}>{this.props?.values?.carPrice}</td>
+                            <td style={styles.textLeft}>{this.props?.values?.payment}</td>
                         </tr>
                     </table>
 
