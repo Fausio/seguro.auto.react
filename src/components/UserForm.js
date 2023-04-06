@@ -1,6 +1,7 @@
 import React, { Component, useState } from 'react'
 import UserDetails from './UserDetails'
 import Result from './Result'
+import Success from './Success'
 import AppBar from 'material-ui/AppBar'
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import SelectField from 'material-ui/SelectField';
@@ -29,7 +30,7 @@ export class UserForm extends Component {
     // proced to nex step  =>
     nextStep = () => {
         const { step } = this.state;
-        console.log("nextStep");
+       
 
         this.setState({
             step: step + 1
@@ -70,7 +71,7 @@ export class UserForm extends Component {
         switch (step) {
 
             case 1:
-                console.log("1", values);
+             
                 return (
                     <UserDetails
 
@@ -82,8 +83,7 @@ export class UserForm extends Component {
 
                 )
             case 2:
-                console.log("2", values);
-                console.log("insurerType", insurerType);
+                
 
                 // calc hive 
                 return (
@@ -98,12 +98,12 @@ export class UserForm extends Component {
                     />
                 )
             case 3:
-                console.log("3");
+           
                 return (
-                    <h1 > Confirm </h1>
+                     <Success />
                 )
             case 4:
-                console.log("4");
+                
                 return (
                     <h1 > Sucess </h1>
                 )

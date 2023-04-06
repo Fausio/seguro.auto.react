@@ -34,7 +34,7 @@ export default class UserDetails extends Component {
     Continue = e => {
 
 
-        /*  var msg = "";
+         var msg = "";
  
          var somNull = false;
  
@@ -56,7 +56,7 @@ export default class UserDetails extends Component {
              alert(" Adicione um valor da viatura valido")
              somNull = false;
              return false;
-         } */
+         }
 
 
 
@@ -105,13 +105,13 @@ export default class UserDetails extends Component {
             <MuiThemeProvider>
                 <React.Fragment>
 
-                    <AppBar title="" />
+                <AppBar title="SEGURO AUTO " />
 
 
 
 
 
-                    <h1> 🟢  -  ⚫  -  ⚫</h1>
+                    <p> 🟢  -  ⚫  -  ⚫</p>
 
 
 

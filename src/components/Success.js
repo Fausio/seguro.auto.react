@@ -6,20 +6,17 @@ import AppBar from 'material-ui/AppBar'
 
 export default class Sucess extends Component {
 
-    Continue = e => {
+    refreshPage = e => {
 
-        e.preventDefault();
-        this.props.nextStep();
+
+        if (confirm('Deseja iniciar uma nova simulação ? ')) {
+            window.location.reload(false);
+        } else {
+
+            console.log('stay');
+        }
+
     }
-
-    back = e => {
-
-
-        e.preventDefault();
-        this.props.prevStep();
-    }
-
-
 
 
     render() {
@@ -43,21 +40,18 @@ export default class Sucess extends Component {
                     <AppBar title="SEGURO AUTO " />
                     <p> 🟢  -  🟢  -  🟢</p>
                     <p> Sucesso ! </p>
-                    <br/>
-                    <RaisedButton
-                        variant="contained"
-                        label="Voltar"
-                        primary={true}
-                        backgroundColor="#FF0000"
-                        style={styles.button}
-                        onClick={this.back} />
+
+                    <p style={{ marginLeft: '20%', marginRight: '20%' }}> Olá! Parabéns por ter feito a simulação de compra de seguro na aplicação Seguro Auto. É muito importante garantir a segurança do seu veículo e ter a proteção necessária em caso de acidentes ou imprevistos. A simulação de compra permite que você avalie diferentes opções de cobertura e preços, para escolher a melhor opção para suas necessidades. </p>
+
+                    <br />
+
 
                     <RaisedButton
                         variant="contained"
-                        label="Continuar"
+                        label="Fazer outra simulação"
                         primary={true}
                         style={styles.button}
-                        onClick={this.Continue} />
+                        onClick={this.refreshPage} />
                 </React.Fragment>
             </MuiThemeProvider>
         )

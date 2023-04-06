@@ -69,8 +69,7 @@ export default class Result extends Component {
 
 
         function formatDollar(num) {
-
-            console.log("dddddd", num)
+ 
 
             var p = num.toFixed(2).split(".");
             return p[0].split("").reverse().reduce(function (acc, num, i, orig) {
@@ -92,15 +91,7 @@ export default class Result extends Component {
                 var calc = formatDollar((6 * Number(this.props?.values?.carPrice)) / 100);  // " Mzn, 6% do valor da viatura"
                 this.props.values.payment = calc + " Mzn, 6% do valor da viatura"
             }
-
-
-
-            console.log("v", this.myRef?.style?.display)
-            /*    if (this.props?.values?.insurerType === "Contra terceiros") {
-                   this.myRef.current.style.display = "none"
-               } else {
-                   this.myRef.current.style.display = "inline"
-               } */
+ 
         }
 
 
@@ -137,10 +128,10 @@ export default class Result extends Component {
                 <React.Fragment>
 
 
-                    <AppBar title=". " />
+                <AppBar title="SEGURO AUTO " />
 
 
-                    <h1> 🟢  -  🟢  -  ⚫</h1>
+                    <p> 🟢  -  🟢  -  ⚫</p>
 
                     <br />
 
@@ -187,7 +178,7 @@ export default class Result extends Component {
 
                     <RaisedButton
                         variant="contained"
-                        label="Continuar"
+                        label="Finalizar"
                         primary={true}
                         style={styles.button}
                         onClick={this.Continue} />
