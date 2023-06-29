@@ -39,7 +39,7 @@ export default class Sucess extends Component {
             <MuiThemeProvider>
 
                 <React.Fragment>
-                    <AppBar title="SEGURO AUTO " />
+                    <AppBar title=". " />
                   
                     <p> 🟢  -  🟢  -  🟢</p>
                     <p> Sucesso ! </p>

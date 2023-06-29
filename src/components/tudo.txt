@@ -1,0 +1,83 @@
+auto seguro updates:
+
+✅ substituir celular por telefone
+
+"eu fiz a simulação mas no fim aparece apenas a mensagem a dar parabens e nao
+ aparece o valor e opçoes de pagamento"
+
+
+"no valor da viatura era fixe ter um i em que o 
+cliente ao passar o rato la ou ao tocar com o dedo 
+diz "Valor que pretende segurar a viatura ou o seu valor de mercado"
+"
+
+"✅ era fixe se aparecesse num formato de dinheiro
+800.000 MZN
+"
+
+
+"✅ em ves de 6% do valor da viatura devia dizer 48.000 MZN & por Ano
+"
+
+"e podia aparecer o logo em cima
+e os dados de pagamento em baixo
+nesta altura ja temos de ter recebido o email com o lead
+"
+
+usa o logo sem borda
+
+
+"
+Pagamento de serviços
+
+Entidade: 99943
+Referência: 000 50478162
+(Anexe o comprovativo)
+
+Conta Móvel: 845270541
+M-Pesa: 845270541
+(caso pague via conta móvel ou mpesa anexe um print screen do sms de confirmação)
+
+"
+
+"
+deve ter uma nota na pagina 2 a dizer que caso nao consiga anexar o comprovativo pode enviar por email para info@seguroauto.co.mz
+
+fazendo referencia ao numero da simulação
+"
+
+"
+Lista de documentos a enviar por email:
+
+- Cópia/foto do BI / DIRE
+- Cópia/foto do livrete e título de propriedade
+- Cópia/foto da carta de condução
+
+
+Na sequência da aprovação, através do Aviso n. 1/CA-ISSM/2019 publicado no Boletim da República nº 121,II SÉRIE, de 24 de Junho, das Directrizes sobre a Prevenção e Combate ao Branqueamento de Capitais e Financiamento do Terrorismo (BC/FT), pelo ISSM solicitamos também  os seguintes documentos para contratação de seguro:
+
+- Cópia/foto NUIT;
+- Cópia/foto do comprovativo de residência (declaração do bairro, factura de água, TV, internet ou de energia);
+- Declaração de rendimentos
+
+"
+
+
+"
+Podemos remover o menu hamburguer
+
+"
+
+
+
+
+
+
+
+
+
+
+
+
+
+

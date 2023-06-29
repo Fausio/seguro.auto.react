@@ -41,7 +41,7 @@ export default class UserDetails extends Component {
 
         if (this.props.values.name === "") { somNull = true; msg = " " + msg + "Nome, " }
         if (this.props.values.email === "") { somNull = true; msg = " " + msg + "EMail, " }
-        if (this.props.values.phone === "") { somNull = true; msg = " " + msg + "Celular, " }
+        if (this.props.values.phone === "") { somNull = true; msg = " " + msg + "Telefone, " }
         if (this.props.values.insurerType === "") { somNull = true; msg = " " + msg + "Tipo de seguro, " }
 
 
@@ -106,7 +106,7 @@ export default class UserDetails extends Component {
             <MuiThemeProvider>
                 <React.Fragment>
 
-                    <AppBar title="SEGURO AUTO " />
+                    <AppBar title=". " />
                        
  
 
@@ -131,8 +131,8 @@ export default class UserDetails extends Component {
                         defaultValue={values.email} />
                     <br />
 
-                    <TextField hintText="Adicione o seu numero de celular"
-                        floatingLabelText="Celular"
+                    <TextField hintText="Adicione o seu numero de telefone"
+                        floatingLabelText="Telefone"
                         onChange={handleChange('phone')}
                         defaultValue={values.phone} />
                     <br />
